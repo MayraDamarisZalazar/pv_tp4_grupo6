@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ProductList({ productos, onEdit }) {
+export default function ProductList({ productos, onEdit, onDelete }) {
   if (productos.length === 0) return <p>No hay productos para mostrar.</p>;
 
   const calcularPrecioConDescuento = (precio, descuento) => {
@@ -37,7 +37,7 @@ export default function ProductList({ productos, onEdit }) {
               <button onClick={() => onEdit(prod)} style={btnEditStyle}>
                 Editar
               </button>
-              <button style={btnDeleteStyle} disabled>
+              <button onClick={() => onDelete(prod.id)} style={btnDeleteStyle}>
                 Eliminar
               </button>
             </td>

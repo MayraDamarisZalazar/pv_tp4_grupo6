@@ -28,13 +28,23 @@ export default function App() {
     setProductoEditando(producto);
   }, []);
 
+  // Eliminar producto
+  const eliminarProducto = useCallback((id) => {
+    setProductos((prev) => prev.filter((prod) => prod.id !== id));
+    // Si está editando el producto que se elimina, limpiar edición
+    setProductoEditando((prev) => (prev?.id === id ? null : prev));
+  }, []);
+
   return (
     <div style={{ maxWidth: 600, margin: "20px auto", fontFamily: "Arial, sans-serif" }}>
       <ProductForm
         onAddProduct={productoEditando ? editarProducto : agregarProducto}
         productoEditando={productoEditando}
       />
-      <ProductList productos={productos} onEdit={seleccionarProducto} />
+      <ProductList 
+      productos={productos} 
+      onEdit={seleccionarProducto}
+      onDelete={eliminarProducto} />
     </div>
   );
 }
