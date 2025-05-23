@@ -20,7 +20,9 @@ export default function ProductForm({ onAddProduct, productoEditando, cancelarEd
       setPrecio("");
       setDescuento("");
       setStock("");
+      console.log("Limpiando formulario");
     }
+    
   }, [productoEditando]);
 
   const handleSubmit = (e) => {
@@ -53,6 +55,13 @@ export default function ProductForm({ onAddProduct, productoEditando, cancelarEd
     }
 
     onAddProduct(producto);
+
+    setTitulo("");
+    setDescripcion("");
+    setPrecio("");
+    setDescuento("");
+    setStock("");
+
   };
 
   return (
