@@ -16,8 +16,8 @@ export default function ProductItem({ producto, onEdit, onDelete }) {
       <td>${calcularPrecioConDescuento(producto.precio, producto.descuento)}</td>
       <td>{producto.stock}</td>
       <td>
-        <button onClick={() => onEdit(producto)} style={btnEditStyle}>Editar</button>
-        <button onClick={() => onDelete(producto.id)} style={btnDeleteStyle}>Eliminar</button>
+        <button onClick={() => onEdit(producto)}  className="edit"/*</td>style={btnEditStyle}*/>Editar</button>
+        <button onClick={() => onDelete(producto.id)} className="delete"/*style={btnDeleteStyle}*/>Eliminar</button>
       </td>
     </tr>
   );

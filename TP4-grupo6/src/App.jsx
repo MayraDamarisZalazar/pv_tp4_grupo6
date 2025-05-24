@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from "react";
 import ProductForm from "./components/ProductForm";
 import ProductList from "./components/ProductList";
+import './App.css';   
+
 
 export default function App() {
   const [productos, setProductos] = useState([]);
@@ -36,7 +38,7 @@ export default function App() {
   }, []);
 
   return (
-    <div style={{ maxWidth: 600, margin: "20px auto", fontFamily: "Arial, sans-serif" }}>
+    <div className="app-container" /*style={{ maxWidth: 600, margin: "20px auto", fontFamily: "Arial, sans-serif" }}*/>
       <ProductForm
         onAddProduct={productoEditando ? editarProducto : agregarProducto}
         productoEditando={productoEditando}
