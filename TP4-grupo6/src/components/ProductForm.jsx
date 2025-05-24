@@ -73,7 +73,8 @@ export default function ProductForm({ onAddProduct, productoEditando, cancelarEd
         placeholder="Título"
         value={titulo}
         onChange={(e) => setTitulo(e.target.value)}
-        style={{ width: "100%", padding: 8, marginBottom: 10 }}
+        /*style={{ width: "100%", padding: 8, marginBottom: 10 }}*/
+        className="form-input"
       />
 
       <input
@@ -81,7 +82,8 @@ export default function ProductForm({ onAddProduct, productoEditando, cancelarEd
         placeholder="Descripción"
         value={descripcion}
         onChange={(e) => setDescripcion(e.target.value)}
-        style={{ width: "100%", padding: 8, marginBottom: 10 }}
+        /*style={{ width: "100%", padding: 8, marginBottom: 10 }}*/
+        className="form-input"
       />
 
       <input
@@ -89,9 +91,10 @@ export default function ProductForm({ onAddProduct, productoEditando, cancelarEd
         placeholder="Precio Unitario"
         value={precio}
         onChange={(e) => setPrecio(e.target.value)}
-        style={{ width: "100%", padding: 8, marginBottom: 10 }}
+        /*style={{ width: "100%", padding: 8, marginBottom: 10 }}*/
         step="0.01"
         min="0"
+        className="form-input"
       />
 
       <input
@@ -99,9 +102,10 @@ export default function ProductForm({ onAddProduct, productoEditando, cancelarEd
         placeholder="Descuento (%)"
         value={descuento}
         onChange={(e) => setDescuento(e.target.value)}
-        style={{ width: "100%", padding: 8, marginBottom: 10 }}
+        /*style={{ width: "100%", padding: 8, marginBottom: 10 }}*/
         step="0.01"
         min="0"
+        className="form-input"
       />
 
       <input
@@ -109,11 +113,12 @@ export default function ProductForm({ onAddProduct, productoEditando, cancelarEd
         placeholder="Stock"
         value={stock}
         onChange={(e) => setStock(e.target.value)}
-        style={{ width: "100%", padding: 8, marginBottom: 10 }}
+        /*style={{ width: "100%", padding: 8, marginBottom: 10 }}*/
         min="0"
+        className="form-input"
       />
 
-      <button type="submit" style={{ padding: 10, marginRight: 10 }}>
+      <button type="submit" className="submit" /*style={{ padding: 10, marginRight: 10 }}*/>
         {productoEditando ? "Guardar Cambios" : "Agregar Producto"}
       </button>
     </form>

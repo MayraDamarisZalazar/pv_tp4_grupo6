@@ -5,7 +5,7 @@ export default function ProductList({ productos, onEdit, onDelete }) {
   if (productos.length === 0) return <p>No hay productos para mostrar.</p>;
 
   return (
-    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+    <table className="product-table" /*style={{ width: "100%", borderCollapse: "collapse" }}*/>
       <thead>
         <tr style={{ backgroundColor: "#eee" }}>
           <th style={thStyle}>ID</th>
