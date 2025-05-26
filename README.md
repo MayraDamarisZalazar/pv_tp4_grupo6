@@ -8,7 +8,7 @@
 
 ###
 
-<p align="left">1_ npm install<br>2_<br>3_ npm run dev</p>
+<p align="left">1_ npm install<br>2_cd TP4-grupo6<br>3_ npm run dev</p>
 
 ###
 
